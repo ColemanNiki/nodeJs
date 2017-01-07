@@ -12,5 +12,8 @@ module.exports = {
             res.end('');
         }
         optfile.writefile('./views/data.txt','data content',recall);
+    },
+    readImg:function(req,res){
+        optfile.readImg('./content/nodejs.jpg',res);
     }
 }

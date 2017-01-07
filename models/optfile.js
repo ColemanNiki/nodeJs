@@ -27,5 +27,18 @@ module.exports={
     writefileSync:function(path,data){
         fs.writeFileSync(path,data);
         console.log("同步写文件完成");
+    },
+    readImg:function(path,res){
+        fs.readFile(path,'binary',function(err,file){
+            if(err){
+                console.log(err);
+                return;
+            }
+            else{
+                console.log('输出文件');
+                res.write(file,'binary');
+                res.end();
+            }
+        })
     }
 }
