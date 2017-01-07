@@ -14,5 +14,18 @@ module.exports={
         var data = fs.readFileSync(path,'utf-8');
         console.log("同步方法执行完毕");
         return data;
+    },
+    writefile:function(path,data,recall){
+        fs.writeFile(path,data,function(err){
+            if(err){
+                throw err;
+            }
+            console.log('it\'s saved!');
+            reacll(true);
+        });
+    },
+    writefileSync:function(path,data){
+        fs.writeFileSync(path,data);
+        console.log("同步写文件完成");
     }
 }
