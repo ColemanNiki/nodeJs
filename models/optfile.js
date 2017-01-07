@@ -21,7 +21,7 @@ module.exports={
                 throw err;
             }
             console.log('it\'s saved!');
-            recall(true);
+            recall('添加成功');
         });
     },
     writefileSync:function(path,data){
