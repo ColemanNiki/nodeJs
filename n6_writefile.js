@@ -4,7 +4,7 @@ var url = require('url');
 http.createServer(function(request,response){
     response.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
     if(request.url !== "/favicon.ico"){
-        var pathname=url.parse(request.url);
+        var pathname = url.parse(request.url).pathname;
         pathname = pathname.replace(/\//,'');
         router[pathname](request,response);
         console.log('主程序完毕');
