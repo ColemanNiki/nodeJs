@@ -21,7 +21,7 @@ module.exports={
                 throw err;
             }
             console.log('it\'s saved!');
-            reacll(true);
+            recall(true);
         });
     },
     writefileSync:function(path,data){
