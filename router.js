@@ -10,7 +10,7 @@ function getRecall(req,res){
     return recall;
 }
 module.exports = {
-    login:function(req,res){
+    toMe:function(req,res){
         // var rdata = url.parse(req.url,true).query;
         // console.log(rdata);
         // if(rdata['email']!=undefined){
@@ -26,9 +26,8 @@ module.exports = {
             console.log('email:'+post['email']+'\n');
             console.log('pwd:'+post['pwd']+'\n');
         })
-
        recall = getRecall(req,res);
-        optfile.readfile('./views/login.html',recall);
+        optfile.readfile('./views/toMe.html',recall);
     },
     zhuce:function (req,res) {
         res.write("我是注册方法");
