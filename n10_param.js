@@ -1,5 +1,5 @@
 var http = require('http');
-var router = require('./router');
+var router = require(path.join(_dirname,'router'));
 var url = require('url');
 var exception = require('./models/exception');
 http.createServer(function(request,response){
